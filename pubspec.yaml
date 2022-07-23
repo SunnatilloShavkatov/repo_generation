@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  build: ">=2.0.0 <3.0.0"
+  analyzer: ">=4.0.0 <5.0.0"
   source_gen: ">=1.0.0 <2.0.0"
   repo_annotation: ^0.0.1
 
