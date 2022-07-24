@@ -5,9 +5,9 @@ targets:
         enabled: true
 
 builders:
-  generators:
+  repo_generator:
     target: ":repo_generator"
-    import: "package:repo_generator/builder.dart"
+    import: "package:repo_generator/repo_generator.dart"
     builder_factories: ["subclassGen", "extGen"]
     build_extensions: { ".dart": [".g.dart"] }
     auto_apply: dependents

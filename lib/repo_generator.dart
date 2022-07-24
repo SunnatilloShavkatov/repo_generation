@@ -5,8 +5,6 @@ import 'package:source_gen/source_gen.dart';
 
 import 'src/extension_generator.dart';
 import 'src/subclass_generator.dart';
-export 'src/extension_generator.dart';
-export 'src/subclass_generator.dart';
 
 Builder extGen(BuilderOptions options) =>
     SharedPartBuilder([ExtensionGenerator()], 'extension_generator');
