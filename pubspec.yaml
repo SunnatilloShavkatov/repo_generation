@@ -1,6 +1,6 @@
 name: repo_generator
 description: Repository class code generation.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/SunnatilloShavkatov/repo_generator.git
 
 environment:
