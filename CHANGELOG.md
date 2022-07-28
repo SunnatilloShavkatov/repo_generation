@@ -1,3 +1,7 @@
+## 0.0.3
+
+* TODO: class name changed 
+
 ## 0.0.2
 
 * TODO: Socket Exception remove

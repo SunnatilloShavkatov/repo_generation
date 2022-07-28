@@ -17,7 +17,7 @@ class SubclassGenerator extends GeneratorForAnnotation<SubclassAnnotation> {
 
     element.visitChildren(visitor);
 
-    var className = "${visitor.className.replaceAll("Base", "")}";
+    var className = "${visitor.className.replaceAll("_", "")}";
 
     var classBuffer = StringBuffer();
 
@@ -66,10 +66,10 @@ class SubclassGenerator extends GeneratorForAnnotation<SubclassAnnotation> {
       classBuffer.writeln('}');
       classBuffer.writeln('return ResponseHandler()..data = response;');
       classBuffer.writeln('}');
-      classBuffer
-          .writeln("Future<dynamic> ${methodName.replaceAll("_", "")} (${parameters}) async {");
       classBuffer.writeln(
-          "    final response = await ${methodName}($parameter);");
+          "Future<dynamic> ${methodName.replaceAll("_", "")} (${parameters}) async {");
+      classBuffer
+          .writeln("    final response = await ${methodName}($parameter);");
       classBuffer.writeln("    if (response.data != null) {");
       classBuffer.writeln("      return response.data;");
       classBuffer.writeln(
