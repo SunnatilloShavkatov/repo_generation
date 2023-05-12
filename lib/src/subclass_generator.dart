@@ -17,13 +17,15 @@ class SubclassGenerator extends GeneratorForAnnotation<SubclassAnnotation> {
 
     element.visitChildren(visitor);
 
+    String className = "${visitor.className}Impl";
+
     var classBuffer = StringBuffer();
 
     // class *Model*Impl
-    classBuffer.writeln("class ${visitor.className}Impl extends ${visitor.className} {");
+    classBuffer.writeln("class $className extends ${visitor.className} {");
 
     classBuffer.writeln("final ApiClient _apiClient;");
-    classBuffer.writeln("${visitor.className}Impl (this._apiClient);");
+    classBuffer.writeln("${className}(this._apiClient);");
     classBuffer.writeln('');
 
     //method
